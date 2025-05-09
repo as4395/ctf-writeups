@@ -18,4 +18,4 @@ Credits [picoCTF](https://picoctf.org/)
 [RED](https://github.com/as4395/ctf-writeups/tree/main/picoctf25/forensics/RED)
 
 # General Skills
-[FANTASY CTF](https://github.com/as4395/ctf-writeups/tree/main/picoctf25/general/FANTASYCTF)
+[FANTASY CTF](https://github.com/as4395/ctf-writeups/tree/main/picoctf25/general-skills/FANTASYCTF)
