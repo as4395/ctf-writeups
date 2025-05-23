@@ -22,3 +22,24 @@ I began by inspecting the file using `exiftool`:
 
 ```bash
 exiftool red.png
+```
+
+Among the standard metadata, there was a custom field labeled `Poem` containing a red-themed poem. This wasn’t typical and suggested that the image may contain steganographic content.
+
+I opened the image in CyberChef to further analyze it:
+
+- Loaded the `red.png` file into CyberChef as input.
+- Applied the `Extract LSB` operation.
+  - Colour Pattern #1: R
+  - Colour Pattern #2: G
+  - Colour Pattern #3: B
+  - Colour Pattern #4: A
+  - Pixel Order: Row
+  - Bit: 0
+- This produced a long string of base64-like data in the output.
+- Then I added the `From Base64` operation with the following settings:
+  - Alphabet: A-Za-z0-9+/=
+  - Remove non-alphabet chars: Checked
+  - Strict mode: Unchecked
+
+The decoded output revealed the flag, repeated dozens of times:
